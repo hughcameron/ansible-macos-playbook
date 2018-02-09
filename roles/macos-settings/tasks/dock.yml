@@ -1,13 +1,5 @@
 ---
 
-- name: Resize Dock.
-  osx_defaults:
-    domain: com.apple.dock
-    key: tilesize
-    type: float
-    value: 36
-  notify: Restart Dock
-
 - name: Show indicator lights for open applications in the Dock.
   osx_defaults:
     domain: com.apple.dock

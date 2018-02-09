@@ -65,6 +65,8 @@ in that file however you like.
 - [ ] Set login screen photo to black
 - [ ] Set up Finder shortcut for Projects
 - [ ] Remove .DS_Store files
+- [ ] Atom dotfile preferences
+- [ ] Keep Ansible script awake while running
 
 
 ## Acknowledgements, Attributions & Appreciations

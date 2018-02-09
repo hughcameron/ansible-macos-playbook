@@ -7,8 +7,3 @@ enable_essentials: yes
 computername: Hugh
 hostname: hugh
 localhostname: hugh
-
-## dev apps
-install_php: yes
-install_docker: yes
-docker_version: edge

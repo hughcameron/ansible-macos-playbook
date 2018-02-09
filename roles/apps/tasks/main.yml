@@ -6,7 +6,6 @@
     state: present
   with_items:
     - homebrew/core
-    - homebrew/science
     - caskroom/cask
     - caskroom/drivers
     - caskroom/fonts
@@ -36,11 +35,12 @@
   with_items:
     -  1password
     -  atom
-    -  betterzipql
+    -  betterzip
     -  dash
     -  google-backup-and-sync
     -  google-chrome
     -  iterm2
+    -  insomnia
     -  nordvpn
     -  postman
     -  qlcolorcode
@@ -54,16 +54,13 @@
     -  quicklook-json
     -  sketch
     -  slack
-    -  tad
     -  thingsmacsandboxhelper
     -  webpquicklook
     -  keepingyouawake
     -  font-fira-code
     -  font-camingocode
     -  font-inconsolata
-    -  font-anonymous-pro
     -  font-anonymice-powerline
-    -  font-interface
 
 - include_role:
     name: mas
