@@ -3,9 +3,6 @@
 - import_tasks: dock.yml
   tags: [dock]
 
-- import_tasks: hot-corners.yml
-  tags: [hot-corners]
-
 - import_tasks: trackpad.yml
   tags: [trackpad]
 

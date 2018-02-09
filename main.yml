@@ -22,9 +22,6 @@
     - name: shell
       tags: [shell]
 
-    - name: yadm
-      tags: [yadm]
-
     - name: dev
       tags: [dev]
 

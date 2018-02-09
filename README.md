@@ -1,30 +1,12 @@
-# Ansible MacOS Playbook
+# MacOS
 
-This is the playbook I use after a clean install of MacOS to set everything up.
-
-Advantages for me over using a shell script based setup
-
-- I can run the playbook over and over again with the same results.
-- Tasks are only executed when changes are needed.
-- The documentation about what is done is right in the output,
-  instead of only in the comments.
-- When a task doesn't work anymore, for example after a new macOS release,
-  I will know immediately which one and why.
-- It helps me to improve my Ansible skills :)
-
-My dotfiles are managed with [yadm](https://thelocehiliosan.github.io/yadm/)
-and stored in a private git repository which is pulled in the first time
-the playbook is run. The repository is private because it includes
-sensitive data like private keys and GitHub tokens. This approach
-allows me to only need the login data of the dotfiles repo
-provider when setting up a computer from scratch.
 
 ## Installation
 
 ### Automated
 
 ```bash
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/jeromegamez/ansible-macos-playbook/master/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/hughcameron/playbook/master/install.sh)"
 ```
 
 ### Manual
@@ -40,7 +22,7 @@ xcode-select --install
 brew install ansible
 
 # Clone this repository
-https://github.com/jeromegamez/ansible-macos-playbook.git
+https://github.com/hughcameron/playbook.git
 
 # Run the playbook
 ansible-playbook main.yml
@@ -52,11 +34,45 @@ If you want to use this playbook for your own computer, fork the repository and
 execute `cp vars/defaults.yml vars/${USER}.yml` - you can change any variable
 in that file however you like.
 
-## Acknowledgements
+### To Do
+- [ ] Preferences > Dotfiles aren't working
+- [ ] Remove macOS folder at end of init isn't working
+- [ ] Fix pyenv dependencies
+- [ ] Create `security` function to leverage Keychain
+- [ ] Place `git config` commands
+- [ ] Setup 1password using cli
+- [ ] Install chrome profiles using cli
+- [ ] Where did 'font-interface' come from, does it need to be replaced?
+- [ ] Re-upload repository on GitHub
+- [ ] Add in a software update command
+- [ ] Change wallpaper method to AppleScript
+- [ ] Create Projects Folder, Assign Icon and Add to Sidebar
+- [ ] Don't use diskutil
++ [ ] Pimp up Spotlight and Quicklook (https://github.com/juanbrujo/Talus)
+- [ ] Set Slack, Things etc. to Open at Login
+- [ ] Sort Desktop by Date Modified
+- [ ] Stop creating DS Store Files
+- [ ] Symlink atom settings to current settings - /Users/hugh/.atom/
+- [ ] View Bluetooth Menu in Toolbar
+- [ ] Why does keyboard beep on move line down (Ctrl + Cmd + Down)?
+- [ ] Create a 'How To Get Started'
+- [X] Add command line developer tools to initilise
+- [X] Improve Terminal view readability
+- [X] Remove keyboard refresh rate
+- [ ] Finder sidebar icons using https://developer.apple.com/library/content/documentation/General/Conceptual/ExtensibilityPG/Finder.html
+- [ ] Sweep unused preloaded apps (Mail, Photobooth, Dashboard, Mission Control) into 'Other' Folder
+- [ ] Disable Guest Profile
+- [ ] Set login screen photo to black
+- [ ] Set up Finder shortcut for Projects
+- [ ] Remove .DS_Store files
 
-This playbook is heavily inspired by
-[Jeff Geerling's mac-dev-playbook](https://github.com/geerlingguy/mac-dev-playbook).
 
-The macOS settings (a.k.a. `defaults write`s) are mostly taken from
-[Mathias Bynens' defaults scripts](https://mths.be/macos) or from one of the
-dotfiles repos from [http://dotfiles.github.io](http://dotfiles.github.io).
+## Acknowledgements, Attributions & Appreciations
+* https://github.com/jeromegamez/ansible-macos-playbook
+* https://github.com/mzdr/macOS
+* https://github.com/pathikrit/mac-setup-script
+* https://github.com/sb2nov/mac-setup
+* https://github.com/JacobDB/git-icon
+* https://github.com/geerlingguy/mac-dev-playbook
+* https://mths.be/macos
+* http://dotfiles.github.io
