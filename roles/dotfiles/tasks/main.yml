@@ -1,0 +1,19 @@
+---
+
+  - name: Symlink dotfiles
+    file: path={{ home }}/.{{ item }} src={{ home }}/.dotfiles/{{ item }} state=link
+    with_items:
+      - gitconfig
+      - zpreztorc
+      - zshrc
+
+  - name: Symlink atom dotfiles
+    file: path={{ home }}/.atom/.{{ item }} src={{ home }}/.dotfiles/.atom/{{ item }} state=link
+    with_items:
+      - config.cson
+      - keymap.cson
+      - kite-config.json
+      - packages.cson
+      - snippets.cson
+      - styles.less
+      - toolbar.cson

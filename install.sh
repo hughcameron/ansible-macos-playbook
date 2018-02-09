@@ -4,8 +4,8 @@ set -o errexit
 set -o errtrace
 set -o nounset
 
-REPO="https://github.com/jeromegamez/ansible-macos-playbook.git"
-TARGET_DIR="$HOME/Development/ansible-macos-playbook"
+REPO="https://github.com/hughcameron/playbook.git"
+TARGET_DIR="$HOME/Projects/playbook"
 
 if ! xcode-select --print-path &> /dev/null; then
   echo "Installing Command Line Tools"

@@ -22,17 +22,14 @@
     - name: shell
       tags: [shell]
 
-    - name: dev
-      tags: [dev]
+    - name: dotfiles
+      tags: [dotfiles]
 
     - name: macos-settings
       tags: [settings]
 
     - name: settings/hostname
       tags: [hostname]
-
-    - name: settings/safari
-      tags: [settings-safari]
 
     - name: settings/system
       tags: [settings-system]
