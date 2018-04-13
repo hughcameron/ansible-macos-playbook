@@ -1,0 +1,59 @@
+/*
+ * Your Stylesheet
+ *
+ * This stylesheet is loaded when Atom starts up and is reloaded automatically
+ * when it is changed and saved.
+ *
+ * Add your own CSS or Less to fully customize Atom.
+ * If you are unfamiliar with Less, you can read more about it here:
+ * http://lesscss.org
+ */
+atom-text-editor {
+    text-rendering: optimizeLegibility;
+}
+
+.header.list-item {
+    margin-left: 1.4rem !important;
+}
+
+.tab.active {
+    background-color: #4C5664;
+}
+
+atom-text-editor {
+    font-family: 'Fira Code';
+    font-style: normal;
+    font-size: 1.1em;
+    text-rendering: optimizeLegibility;
+}
+
+atom-text-editor::shadow {
+    .string.quoted,
+    .string.regexp {
+        -webkit-font-feature-settings: "liga" off, "calt" off;
+    }
+
+    .storage,
+    .syntax--comment,
+    .syntax--string,
+    .type {
+        vertical-align: baseline;
+        font-family: 'CodeNewRoman Nerd Font Mono';
+        font-style: italic;
+        height: inherit;
+        font-size: 1.1em;
+        line-height: 1rem;
+        font-weight: normal;
+    }
+
+    .source.js.jsx,
+    .storage.type.function.arrow.js,
+    .variable {
+        font-family: 'Fira Code';
+        font-style: normal;
+    }
+
+    .string.unquoted.js {
+        color: #CDD3DE;
+    }
+}

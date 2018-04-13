@@ -28,6 +28,7 @@ https://github.com/hughcameron/playbook.git
 ansible-playbook main.yml
 ```
 
+
 ### Variables
 
 If you want to use this playbook for your own computer, fork the repository and
@@ -67,6 +68,9 @@ in that file however you like.
 - [ ] Remove .DS_Store files
 - [ ] Atom dotfile preferences
 - [ ] Keep Ansible script awake while running
+- [ ] Switch to VS Code
+- [ ] Modify VS Code Logo
+- [ ] Modify Letterpress (/Applications/Visual Studio Code.app/Contents/Resources/app/resources/letterpress.svg)
 
 
 ## Acknowledgements, Attributions & Appreciations
