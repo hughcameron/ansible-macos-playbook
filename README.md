@@ -68,9 +68,8 @@ in that file however you like.
 - [ ] Remove .DS_Store files
 - [ ] Atom dotfile preferences
 - [ ] Keep Ansible script awake while running
-- [ ] Switch to VS Code
-- [ ] Modify VS Code Logo
-- [ ] Modify Letterpress (/Applications/Visual Studio Code.app/Contents/Resources/app/resources/letterpress.svg)
+- [ ] Add `pip install --upgrade sqlparse`
+
 
 
 ## Acknowledgements, Attributions & Appreciations
