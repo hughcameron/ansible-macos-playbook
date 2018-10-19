@@ -36,6 +36,8 @@ execute `cp vars/defaults.yml vars/${USER}.yml` - you can change any variable
 in that file however you like.
 
 ### To Do
+- [ ] Switch from zsh to straight bash or Fish Shell
+- [ ] Add KeyBinding folder to ~/Library/KeyBindings as per https://github.com/atom/atom/issues/1669#issuecomment-135503562
 - [ ] Preferences > Dotfiles aren't working
 - [ ] Remove macOS folder at end of init isn't working
 - [ ] Fix pyenv dependencies

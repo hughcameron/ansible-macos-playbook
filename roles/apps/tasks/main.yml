@@ -15,68 +15,74 @@
   homebrew:
     name: "{{ item }}"
   with_items:
+    -  ansible
+    -  curl
+    -  docker
     -  ffmpeg
     -  git
-    -  hunspell
     -  mas
     -  node
-    -  proselint
-    -  pyenv
-    -  r
     -  sqlite
     -  tldr
     -  wget
     -  youtube-dl
-    -  z
 
 - name: Install casks.
   homebrew_cask:
     name: "{{ item }}"
   with_items:
     -  1password
-    -  atom
-    -  betterzip
+    -  alfred
+    -  anaconda
     -  dash
-    -  google-backup-and-sync
+    -  docker-toolbox
+    -  dropbox
+    -  font-anonymice-powerline
+    -  font-camingocode
+    -  font-codenewroman-nerd-font-mono
+    -  font-fira-code
+    -  font-ibm-plex
+    -  font-inconsolata
+    -  github
     -  google-chrome
     -  hyper
     -  insomnia
+    -  keepingyouawake
+    -  micro-snitch
     -  nordvpn
-    -  postman
+    -  notion
     -  qlcolorcode
     -  qlimagesize
     -  qlmarkdown
     -  qlprettypatch
     -  qlstephen
     -  qlvideo
-    -  quicklookase
     -  quicklook-csv
     -  quicklook-json
+    -  quicklookase
     -  sketch
     -  slack
-    -  thingsmacsandboxhelper
+    -  tableplus
+    -  the-unarchiver
+    -  transmit
+    -  tunnelblick
+    -  visual-studio-code
     -  webpquicklook
-    -  keepingyouawake
-    -  font-fira-code
-    -  font-camingocode
-    -  font-inconsolata
-    -  font-anonymice-powerline
 
 - include_role:
     name: mas
   tags: [mas]
   vars:
     mas_apps:
-      - { name: Bear, id: 1091189122 }
-      - { name: Trello, id: 1278508951 }
-      - { name: Pixelmator, id: 407963104 }
+      - { name: Agenda, id: 1287445660 }
       - { name: Keynote, id: 409183694 }
-      - { name: Pages, id: 409201541 }
       - { name: Numbers, id: 409203825 }
-      - { name: Better Rename 9, id: 414209656 }
+      - { name: Pages, id: 409201541 }
+      - { name: Pixelmator, id: 407963104 }
+      - { name: Proxie, id: 897814548 }
+      - { name: Quiver, id: 866773894 }
       - { name: Sip, id: 507257563 }
-      - { name: Reeder, id: 880001334 }
-      - { name: Things3, id: 904280696 }
+      - { name: Table Tool, id: 1122008420 }
     mas_upgrade_all_apps: yes
 
 - include_role:
@@ -85,19 +91,21 @@
   vars:
     dock_remove_undefined: yes
     dock_apps:
-      - name: Trello
-        path: /Applications/Trello.app
-      - name: Slack
-        path: /Applications/Slack.app
-      - name: Reeder
-        path: /Applications/Reeder.app
-      - name: Bear
-        path: /Applications/Bear.app
-      - name: Things
-        path: /Applications/Things3.app
+      - name: Messages
+        path: /Applications/Messages.app
+      - name: iTunes
+        path: /Applications/iTunes.app
       - name: Google Chrome
         path: /Applications/Google Chrome.app
+      - name: Slack
+        path: /Applications/Slack.app
+      - name: Agenda
+        path: /Applications/Agenda.app
       - name: Dash
         path: /Applications/Dash.app
-      - name: Atom
-        path: /Applications/Atom.app
+      - name: Quiver
+        path: /Applications/Quiver.app
+      - name: Hyper
+        path: /Applications/Hyper.app
+      - name: Visual Studio Code
+        path: /Applications/Visual Studio Code.app
