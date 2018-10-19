@@ -19,11 +19,11 @@
       tags: [essentials]
       when: enable_essentials
 
-    - name: shell
-      tags: [shell]
+    # - name: shell
+    #   tags: [shell]
 
-    - name: dotfiles
-      tags: [dotfiles]
+    # - name: dotfiles
+    #   tags: [dotfiles]
 
     - name: macos-settings
       tags: [settings]
